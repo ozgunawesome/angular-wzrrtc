@@ -29,6 +29,10 @@ export class CartComponent implements OnInit {
     console.warn('Your order has been submitted', customerData);
   }
 
+  onClear() {
+    this.items = this.cartService.clearCart();
+  }
+
   ngOnInit() {
     this.items = this.cartService.getItems();
   }

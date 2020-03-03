@@ -25,7 +25,6 @@ export class CartService {
     this.items = [];
     this.notify.emit({itemCount: this.getItemCount()});
     return this.items;
-    
   }
 
   getShippingPrices() {
