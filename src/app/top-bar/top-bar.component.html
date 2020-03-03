@@ -1,8 +1,17 @@
 <a [routerLink]="['/']">
-  <h1>My Store</h1>
+	<h1>My Store</h1>
 </a>
 
-<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
+<ng-container>
+	<a routerLink="/cart" >
+		<div class="button fancy-button">
+			<i class="material-icons">shopping_cart</i>Checkout
+			<ng-container *ngIf="cartItemCount > 0">
+				({{cartItemCount}})
+			</ng-container>
+		</div>
+	</a>
+</ng-container>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
